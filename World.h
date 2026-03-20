@@ -1,4 +1,8 @@
 #pragma once
+#define			MAX_WILDBOAR_COUNT		5
+#define			MAX_GOBLIN_COUNT		3
+#define			MAX_SLIME_COUNT			20
+
 
 class UWorld
 {

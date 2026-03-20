@@ -9,7 +9,7 @@ public:
 
 	void AttacktoPlayer();
 	void Dead();
-	void Move();
+	virtual void Move() override;
 	void DropMoney();
 };
 

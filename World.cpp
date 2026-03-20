@@ -4,10 +4,12 @@
 #include "Monster.h"
 
 UWorld::UWorld() 
-	: PlayerCount(0), GoblinCount(0), SlimeCount(0), 
-	WildBoarCount(0), Player(nullptr), Wildboar(nullptr),
-	Goblin(nullptr), Slime(nullptr)
+	: PlayerCount(1), GoblinCount(rand() % MAX_GOBLIN_COUNT + 1), SlimeCount(rand() % MAX_SLIME_COUNT + 1),
+	WildBoarCount(rand() % MAX_WILDBOAR_COUNT + 1)
 {
+	Player = new APlayer;
+
+
 
 }
 

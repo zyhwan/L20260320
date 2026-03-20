@@ -4,60 +4,38 @@
 #include "WildBoar.h"
 #include "Goblin.h"
 #include "Slime.h"
-
-#define			MAX_WILDBOAR_COUNT		5
-#define			MAX_GOBLIN_COUNT		3
-#define			MAX_SLIME_COUNT			20
-
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-	//UEngine* Engine = nullptr;
+	vector<AActor*> Actors;
 
-	//Engine = new UEngine;
-	//Engine->Run();
-	//Engine->Term();
+	Actors.push_back(new AGoblin);
+	Actors.push_back(new ASlime);
+	Actors.push_back(new AMonster);
+	Actors.push_back(new APlayer);
 
-	//멧돼지(최대 5마리), 고블린(최대 3마리), 슬라임(1~20마리)
-
-	srand(time(nullptr));
-
-	int WildBoarCount;
-	int GoblinCount;
-	int SlimeCount;
-
-	WildBoarCount = rand() % MAX_WILDBOAR_COUNT + 1;
-	GoblinCount = rand() % MAX_GOBLIN_COUNT + 1;
-	SlimeCount = rand() % MAX_SLIME_COUNT + 1;
-
-
-	AWildBoar* WildBoars = new AWildBoar[WildBoarCount];
-	AGoblin* Goblins = new AGoblin[GoblinCount];
-	ASlime* Slimes = new ASlime[SlimeCount];
-
-	cout << "맷돼지 수 : " << WildBoarCount << endl;
-	for (int i = 0; i < WildBoarCount; i++)
+	//모든 엑터 이동
+	for (int i = 0; i < Actors.size(); ++i)
 	{
-		WildBoars[i].Move();
+		Actors[i]->Move();
 	}
 
-	cout << "고블린 수 : " << GoblinCount << endl;
-	for (int i = 0; i < GoblinCount; i++)
+	//OOP 최종단계
+	// 각각의 객체에 명령을 하는것이 아닌 모든 엑터가 동시에 
+	for (const auto& Actor : Actors) // &: 참조로 복사를 하지않겠다. const: 읽기만 하겠다. 복사는 비용이 많이 들기 때문에 이와 같이 읽기만 할경우엔 최적화된 코드가 좋다.
 	{
-		Goblins[i].Move();
+		Actor->Move();
 	}
 
-	cout << "슬라임 수 : " << SlimeCount << endl;
-	for (int i = 0; i < SlimeCount; i++)
+	Actors.clear();
+	for (auto& Actor : Actors)
 	{
-		Slimes[i].Move();
+		delete Actor;
 	}
 
-	delete[] WildBoars;
-	delete[] Goblins;
-	delete[] Slimes;
 
 	return 0;
 }

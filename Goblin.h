@@ -7,6 +7,6 @@ public:
 	AGoblin();
 	~AGoblin();
 
-	void Move();
+	void Move() override;
 };
 

@@ -7,6 +7,6 @@ public:
 	AWildBoar();
 	~AWildBoar();
 
-	void Move();
+	void Move() override;
 };
 

@@ -9,7 +9,17 @@ AActor::~AActor()
 {
 }
 
+void AActor::BeginPlay()
+{
+
+}
+
 void AActor::Move()
 {
-	std::cout << "Move()" << std::endl;
+	std::cout << "AActor::Move()" << std::endl;
+}
+
+void AActor::Render()
+{
+
 }

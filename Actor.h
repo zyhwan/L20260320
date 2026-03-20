@@ -17,7 +17,11 @@ public:
 	AActor();
 	~AActor();
 
-	void Move();
+
+	virtual void BeginPlay();
+	virtual void Move();
+	virtual void Tick();
+	virtual void Render();
 
 protected:
 	Transform Trans;
