@@ -9,4 +9,5 @@ UEngine::UEngine()
 UEngine::~UEngine()
 {
 	delete World;
+	World = nullptr;
 }
