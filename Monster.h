@@ -1,9 +1,6 @@
 #pragma once
 #include "Actor.h"
 
-
-class APlayer;
-
 class AMonster : public AActor
 {
 public:

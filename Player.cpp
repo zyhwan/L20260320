@@ -9,7 +9,6 @@ APlayer::APlayer()
 	x = 1;
 	y = 1;
 	Gold = nullptr;
-	std::cout << "플레이어 현재 좌표 (" << x << ", " << y << ") " << std::endl;
 }
 
 APlayer::~APlayer()
@@ -29,4 +28,8 @@ void APlayer::Move()
 void APlayer::GetMoney()
 {
 	std::cout << "돈을 얻습니다." << std::endl;
+}
+
+void APlayer::Die()
+{
 }

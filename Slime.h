@@ -1,8 +1,8 @@
 #pragma once
-#include "Monster.h"
+#include "Actor.h"
 
 
-class ASlime : public AMonster
+class ASlime : public AActor
 {
 public:
 	ASlime();

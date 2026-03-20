@@ -13,6 +13,8 @@ public:
 	void AttacktoMonster();
 	void Move();
 	void GetMoney();
+	void Die();
+
 
 	AGold* Gold;
 };

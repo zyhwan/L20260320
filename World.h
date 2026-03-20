@@ -9,6 +9,9 @@ public:
 	UWorld();
 	~UWorld();
 
+	void Process();
+	void Render();
+
 	APlayer* Player;
 	AMonster* Monster;
 };

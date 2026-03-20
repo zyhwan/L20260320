@@ -5,8 +5,11 @@ using namespace std;
 
 int main()
 {
-	UEngine Engine;
+	UEngine* Engine = nullptr;
 
+	Engine = new UEngine;
+	Engine->Run();
+	Engine->Term();
 
 	return 0;
 }
