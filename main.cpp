@@ -5,6 +5,11 @@
 #include "Goblin.h"
 #include "Slime.h"
 
+#define			MAX_WILDBOAR_COUNT		5
+#define			MAX_GOBLIN_COUNT		3
+#define			MAX_SLIME_COUNT			20
+
+
 using namespace std;
 
 int main()
@@ -23,9 +28,9 @@ int main()
 	int GoblinCount;
 	int SlimeCount;
 
-	WildBoarCount = rand() % 5 + 1;
-	GoblinCount = rand() % 3 + 1;
-	SlimeCount = rand() % 20 + 1;
+	WildBoarCount = rand() % MAX_WILDBOAR_COUNT + 1;
+	GoblinCount = rand() % MAX_GOBLIN_COUNT + 1;
+	SlimeCount = rand() % MAX_SLIME_COUNT + 1;
 
 
 	AWildBoar* WildBoar = new AWildBoar[WildBoarCount];
