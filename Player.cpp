@@ -6,8 +6,6 @@
 
 APlayer::APlayer()
 {
-	x = 1;
-	y = 1;
 	Gold = nullptr;
 }
 

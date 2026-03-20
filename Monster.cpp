@@ -4,9 +4,7 @@
 
 AMonster::AMonster()
 {
-	x = 9;
-	y = 9;
-	std::cout << "몬스터 현재 좌표 (" << x << ", " << y << ") " << std::endl;
+
 }
 
 AMonster::~AMonster()

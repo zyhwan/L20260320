@@ -1,5 +1,4 @@
 #pragma once
-
 struct Vector2D
 {
 	int x;
@@ -19,4 +18,7 @@ public:
 	~AActor();
 
 	void Move();
+
+protected:
+	Transform Trans;
 };

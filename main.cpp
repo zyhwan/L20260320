@@ -1,15 +1,58 @@
 #include <iostream>
 #include "Engine.h"
+#include "Player.h"
+#include "WildBoar.h"
+#include "Goblin.h"
+#include "Slime.h"
 
 using namespace std;
 
 int main()
 {
-	UEngine* Engine = nullptr;
+	//UEngine* Engine = nullptr;
 
-	Engine = new UEngine;
-	Engine->Run();
-	Engine->Term();
+	//Engine = new UEngine;
+	//Engine->Run();
+	//Engine->Term();
+
+	//멧돼지(최대 5마리), 고블린(최대 3마리), 슬라임(1~20마리)
+
+	srand(time(nullptr));
+
+	int WildBoarCount;
+	int GoblinCount;
+	int SlimeCount;
+
+	WildBoarCount = rand() % 5 + 1;
+	GoblinCount = rand() % 3 + 1;
+	SlimeCount = rand() % 20 + 1;
+
+
+	AWildBoar* WildBoar = new AWildBoar[WildBoarCount];
+	AGoblin* Goblin = new AGoblin[GoblinCount];
+	ASlime* Slime = new ASlime[SlimeCount];
+
+	cout << "맷돼지 수 : " << WildBoarCount << endl;
+	for (int i = 0; i < WildBoarCount; i++)
+	{
+		WildBoar[i].Move();
+	}
+
+	cout << "고블린 수 : " << GoblinCount << endl;
+	for (int i = 0; i < GoblinCount; i++)
+	{
+		Goblin[i].Move();
+	}
+
+	cout << "슬라임 수 : " << SlimeCount << endl;
+	for (int i = 0; i < SlimeCount; i++)
+	{
+		Slime[i].Move();
+	}
+
+	delete[] WildBoar;
+	delete[] Goblin;
+	delete[] Slime;
 
 	return 0;
 }

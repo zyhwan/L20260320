@@ -1,9 +1,17 @@
 #include "Wildboar.h"
+#include <iostream>
 
-AWildboar::AWildboar()
+AWildBoar::AWildBoar()
 {
 }
 
-AWildboar::~AWildboar()
+AWildBoar::~AWildBoar()
 {
+}
+
+void AWildBoar::Move()
+{
+	std::cout << "AWildBoar::";
+
+	AActor::Move();
 }

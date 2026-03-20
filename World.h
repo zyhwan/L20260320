@@ -1,8 +1,5 @@
 #pragma once
 
-class APlayer;
-class AMonster;
-
 class UWorld
 {
 public:
@@ -12,7 +9,15 @@ public:
 	void Process();
 	void Render();
 
-	APlayer* Player;
-	AMonster* Monster;
+	class APlayer* Player;
+	class AGoblin* Goblin;
+	class AWildBoar* Wildboar;
+	class ASlime* Slime;
+
+	int GoblinCount;
+	int SlimeCount;
+	int WildBoarCount;
+	int PlayerCount;
+
 };
 
