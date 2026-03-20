@@ -33,31 +33,31 @@ int main()
 	SlimeCount = rand() % MAX_SLIME_COUNT + 1;
 
 
-	AWildBoar* WildBoar = new AWildBoar[WildBoarCount];
-	AGoblin* Goblin = new AGoblin[GoblinCount];
-	ASlime* Slime = new ASlime[SlimeCount];
+	AWildBoar* WildBoars = new AWildBoar[WildBoarCount];
+	AGoblin* Goblins = new AGoblin[GoblinCount];
+	ASlime* Slimes = new ASlime[SlimeCount];
 
 	cout << "맷돼지 수 : " << WildBoarCount << endl;
 	for (int i = 0; i < WildBoarCount; i++)
 	{
-		WildBoar[i].Move();
+		WildBoars[i].Move();
 	}
 
 	cout << "고블린 수 : " << GoblinCount << endl;
 	for (int i = 0; i < GoblinCount; i++)
 	{
-		Goblin[i].Move();
+		Goblins[i].Move();
 	}
 
 	cout << "슬라임 수 : " << SlimeCount << endl;
 	for (int i = 0; i < SlimeCount; i++)
 	{
-		Slime[i].Move();
+		Slimes[i].Move();
 	}
 
-	delete[] WildBoar;
-	delete[] Goblin;
-	delete[] Slime;
+	delete[] WildBoars;
+	delete[] Goblins;
+	delete[] Slimes;
 
 	return 0;
 }
